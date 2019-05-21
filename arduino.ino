@@ -1,11 +1,11 @@
-#include <Servo.h>. 
+#include <Servo.h>. //servo kütüphanesi çağırma
 
 // Ultrasonik Sinyal pinleri
 const int trigPin = 10;
 const int echoPin = 11;
 
-long duration;
-int distance;
+long duration; //32 bitlik değişken tanımlama
+int distance; //tam sayı değişkeni tanımlama
 
 Servo myServo; 
 
