@@ -12,7 +12,7 @@ Servo myServo;
 void setup() {
   pinMode(trigPin, OUTPUT); //Fonksiyon pini çıkış
   pinMode(echoPin, INPUT);  //Fonksiyon pini giriş
-  Serial.begin(9600);
+  Serial.begin(9600);  //Seri haberleşmede fonksiyonun iletişim hızı ayarı
   myServo.attach(12); // Servo motor sinyal pini
 }
 void loop() {
