@@ -11,15 +11,15 @@ String data="";
 String noObject;
 float pixsDistance;
 int iAngle, iDistance;
-int index1=0;
-int index2=0;
+int index1=0; //servodan gelen değer
+int index2=0; //mesafe sensöründen gelen değer
 PFont orcFont;
 
 void setup() {
   
- size (1366, 700);
+ size (1366, 700); //açılan pencerenin boyutu
  smooth();
- myPort = new Serial(this,"COM3", 9600); // Com portunu seçin
+ myPort = new Serial(this,"COM3", 9600); // ÖN AYAR seri haberleşme için portun ve haberleşme hızının belirlenmesi
  myPort.bufferUntil('.'); 
 
 }
