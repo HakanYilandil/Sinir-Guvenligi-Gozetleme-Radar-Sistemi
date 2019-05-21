@@ -10,8 +10,8 @@ int distance;
 Servo myServo; 
 
 void setup() {
-  pinMode(trigPin, OUTPUT); 
-  pinMode(echoPin, INPUT); 
+  pinMode(trigPin, OUTPUT); //Fonksiyon pini çıkış
+  pinMode(echoPin, INPUT);  //Fonksiyon pini giriş
   Serial.begin(9600);
   myServo.attach(12); // Servo motor sinyal pini
 }
@@ -19,7 +19,7 @@ void loop() {
   // 15 derece ile 165 derece arasında dön
   for(int i=15;i<=165;i++){  
   myServo.write(i);
-  delay(30);
+  delay(30); // Bekleme süresi belirleme
   distance = calculateDistance();
   
   Serial.print(i); 
