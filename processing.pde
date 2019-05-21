@@ -65,7 +65,7 @@ void drawRadar() {
   arc(0,0,1000,1000,PI,TWO_PI);
   arc(0,0,700,700,PI,TWO_PI);
   arc(0,0,400,400,PI,TWO_PI);
-  // draws the angle lines
+  // açı çizgilerini çizme
   line(-700,0,700,0);
   line(0,0,-700*cos(radians(30)),-700*sin(radians(30)));
   line(0,0,-700*cos(radians(60)),-700*sin(radians(60)));
