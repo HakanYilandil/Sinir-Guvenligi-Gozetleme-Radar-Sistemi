@@ -1,13 +1,13 @@
 #include <Servo.h>. //servo kütüphanesi çağırma
 
 // Ultrasonik Sinyal pinleri
-const int trigPin = 10;
+const int trigPin = 10; 
 const int echoPin = 11;
 
 long duration; //32 bitlik değişken tanımlama
 int distance; //tam sayı değişkeni tanımlama
 
-Servo myServo; 
+Servo myServo; //Kütüphane kullanılarak bir nesne oluşturulması
 
 void setup() {
   pinMode(trigPin, OUTPUT); //Fonksiyon pini çıkış
@@ -18,10 +18,11 @@ void setup() {
 void loop() {
   // 15 derece ile 165 derece arasında dön
   for(int i=15;i<=165;i++){  
-  myServo.write(i);
+  myServo.write(i); // Bu fonksiyon ile daha önceden bağlanmış olan motorumuzun açı değeri ayarlanır. 0 ile 180 aralığında bir değer alır
   delay(30); // Bekleme süresi belirleme
   distance = calculateDistance();
   
+  //Seri İletişim ile Veri Gönderme  
   Serial.print(i); 
   Serial.print(","); 
   Serial.print(distance); 
